@@ -11,7 +11,7 @@ public class Person {
     
     private String firstName;
     private String lastName;
-    private String birthDate;
+    private BirthDate birthDate;
     private boolean gender;
     private State state;
 
@@ -46,15 +46,15 @@ public class Person {
     /**
      * @return the birthdate
      */
-    public String getBirthdate() {
-        return birthdate;
+    public BirthDate getBirthdate() {
+        return birthDate;
     }
 
     /**
      * @param birthdate the birthdate to set
      */
-    public void setBirthdate(String birthdate) {
-        this.birthdate = birthdate;
+    public void setBirthdate(BirthDate birthdate) {
+        this.birthDate = birthdate;
     }
 
     /**
