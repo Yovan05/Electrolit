@@ -84,7 +84,10 @@ public class Person {
     public void setState(State state) {
         this.state = state;
     }
-    
+    /**
+     * Indicates the curp of a person
+     * @return the String that indicates the person's curp
+     */
     public String curp(){
     
         String [] surnames =this.lastName.toUpperCase().split(" ");
@@ -100,8 +103,44 @@ public class Person {
         char[] lettersName = this.firstName.toUpperCase().toCharArray();
         String firstQuadrant = firstPart+lettersTwo[0]+lettersName[0];
         
-        String curp="";
-        return firstQuadrant;
+        String gender = "";
+        if(this.gender){
+            gender = "H";
+        }else{gender = "M";}
+        
+        String firstInternalConsonant = "";
+        for(int i = 1 ; i < letters.length-1 ; i++){
+            char character = letters[i];
+            if(!(character == 'A' || character == 'E' || character == 'I' || character == 'O' || character == 'U')){
+                firstInternalConsonant = String.valueOf(character);
+                break;
+            }
+        }
+        
+        
+        String firstSecondInternalConsonant = "";
+        for(int i = 1 ; i < lettersTwo.length-1 ; i++){
+            char character = lettersTwo[i];
+            if(!(character == 'A' || character == 'E' || character == 'I' || character == 'O' || character == 'U')){
+                firstSecondInternalConsonant = String.valueOf(character);
+                break;
+             }
+        }
+        
+        String firstInternalConsonantName = "";
+        for(int i = 1 ; i < lettersName.length-1 ; i++){
+            char character = lettersName[i];
+            if(!(character == 'A' || character == 'E' || character == 'I' || character == 'O' || character == 'U')){
+                firstInternalConsonantName = String.valueOf(character);
+                break;
+             }
+        }
+        
+        String quadrantConsonants = firstInternalConsonant+firstSecondInternalConsonant+firstInternalConsonantName;
+        
+        
+        String curp=""/*firstQuadrant+gender+quadrantConsonants*/;
+        return curp;
     }
     
     

@@ -21,6 +21,7 @@ public class Pruebas {
         
         p1.setLastName("Rodriguez Vallejo");
         p1.setFirstName("Yovan Alexis");
+        p1.setGender(true);
         
         String avance = p1.curp();
         System.out.println(avance);
