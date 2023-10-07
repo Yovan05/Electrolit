@@ -139,7 +139,7 @@ public class Person {
         String quadrantConsonants = firstInternalConsonant+firstSecondInternalConsonant+firstInternalConsonantName;
         
         
-        String curp=""/*firstQuadrant+gender+quadrantConsonants*/;
+        String curp=""/*firstQuadrant+birthDate.getDay()+birthDate.getMounth()+birthDate.getYear()+state+gender+quadrantConsonants+(antes del 2000 o despues+nmero del 0 al 9*/;
         return curp;
     }
     
