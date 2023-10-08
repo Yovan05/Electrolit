@@ -8,7 +8,7 @@ import mx.itson.electrolit.enums.Month;
 
 /**
  * 
- * @author alexi
+ * @author galaz
  */
 public class BirthDate {
  
