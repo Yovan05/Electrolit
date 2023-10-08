@@ -13,7 +13,7 @@ public class Person {
     private String lastName;
     private BirthDate birthDate;
     private boolean gender;
-    private State state;
+    private int state;
 
     /**
      * @return the firstName
@@ -74,14 +74,14 @@ public class Person {
     /**
      * @return the state
      */
-    public State getState() {
+    public int getState() {
         return state;
     }
 
     /**
      * @param state the state to set
      */
-    public void setState(State state) {
+    public void setState(int state) {
         this.state = state;
     }
     /**
@@ -138,8 +138,15 @@ public class Person {
         
         String quadrantConsonants = firstInternalConsonant+firstSecondInternalConsonant+firstInternalConsonantName;
         
+        String century ="";
+        if(birthDate.getYear()<2000){
+            century = "0";
+        }else{
+            century = "A";
+        }
         
-        String curp=""/*firstQuadrant+birthDate.getDay()+birthDate.getMounth()+birthDate.getYear()+state+gender+quadrantConsonants+(antes del 2000 o despues+nmero del 0 al 9*/;
+ 
+        String curp=firstQuadrant+this.birthDate.birthDay()+gender+State.values()[state]+quadrantConsonants+century+1;
         return curp;
     }
     

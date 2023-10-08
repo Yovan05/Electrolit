@@ -58,7 +58,39 @@ public class BirthDate {
         this.year = year;
     }
     
-   
+    /**
+     * Converts the BirthDate class to a String with AA/MM/DD format
+     * @return String with the day of birth in AA/MM/DD format
+     */
+   public String birthDay(){
+       
+       String day="";
+       if(this.day<10){
+           day ="0"+this.day;
+       }else{
+           day =this.day+"";
+       }
+       
+       String mounth="";
+       
+       if(1+this.month.ordinal()<10){
+        mounth = "0"+(1+this.month.ordinal())+"";
+       }else{
+           mounth = 1+this.month.ordinal()+"";
+       }
+       
+       String year = this.year+"";
+       String lastDigits = "";
+       char [] position = year.toCharArray();
+       for(int i = 0; i<year.length(); i++){
+           if(i>1){
+               String digitYear = String.valueOf(position[i]);
+               lastDigits += digitYear;
+           }
+       }
+       String birthDay = lastDigits+mounth+day;
+       return birthDay;
+   }
 
 
 
