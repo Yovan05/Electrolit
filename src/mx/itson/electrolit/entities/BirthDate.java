@@ -59,7 +59,7 @@ public class BirthDate {
     }
     
     /**
-     * Converts the BirthDate class to a String with AA/MM/DD format
+     * Converts birth date into a chain with AA/MM/DD format
      * @return String with the day of birth in AA/MM/DD format
      */
    public String birthDay(){

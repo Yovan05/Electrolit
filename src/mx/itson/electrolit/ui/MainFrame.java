@@ -1,9 +1,14 @@
 
 package mx.itson.electrolit.ui;
 
+import javax.swing.JOptionPane;
+import mx.itson.electrolit.entities.BirthDate;
+import mx.itson.electrolit.entities.Person;
+import mx.itson.electrolit.enums.Month;
+
 
 /**
- * generates a curp with the entered data
+ * Generates a curp with the entered data
  * @author Delta
  */
 public class MainFrame extends javax.swing.JFrame {
@@ -95,7 +100,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jcbState.setBackground(new java.awt.Color(255, 255, 255));
         jcbState.setForeground(new java.awt.Color(0, 0, 0));
-        jcbState.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Aguascalientes ", "Baja California ", "Baja California Sur ", "Campeche ", "Chiapas ", "Chihuahua ", "Ciudad de México ", "Coahuila ", "Colima ", "Durango ", "Estado de México ", "Guanajuato ", "Guerrero ", "Hidalgo ", "Jalisco ", "Michoacán ", "Morelos ", "Nayarit ", "Nuevo León ", "Oaxaca ", "Puebla ", "Querétaro ", "Quintana Roo ", "San Luis Potosí ", "Sinaloa ", "Sonora ", "Tabasco ", "Tamaulipas ", "Tlaxcala ", "Veracruz ", "Yucatán ", "Zacatecas" }));
+        jcbState.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Aguascalientes ", "Baja California ", "Baja California Sur ", "Campeche ", "Chiapas ", "Chihuahua ", "Ciudad de México ", "Coahuila ", "Colima ", "Durango ", "Estado de México ", "Guanajuato ", "Guerrero ", "Hidalgo ", "Jalisco ", "Michoacán ", "Morelos ", "Nayarit ", "Nuevo León ", "Oaxaca ", "Puebla ", "Querétaro ", "Quintana Roo ", "San Luis Potosí ", "Sinaloa ", "Sonora ", "Tabasco ", "Tamaulipas ", "Tlaxcala ", "Veracruz ", "Yucatán ", "Zacatecas", "Born abroad" }));
         jcbState.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jcbDay.setBackground(new java.awt.Color(255, 255, 255));
@@ -126,6 +131,11 @@ public class MainFrame extends javax.swing.JFrame {
         btnGenerateCurp.setForeground(new java.awt.Color(0, 0, 0));
         btnGenerateCurp.setText("Generate CURP");
         btnGenerateCurp.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnGenerateCurp.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                btnGenerateCurpMouseClicked(evt);
+            }
+        });
         btnGenerateCurp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGenerateCurpActionPerformed(evt);
@@ -297,6 +307,38 @@ public class MainFrame extends javax.swing.JFrame {
     private void btnGenerateCurpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGenerateCurpActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnGenerateCurpActionPerformed
+
+    private void btnGenerateCurpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnGenerateCurpMouseClicked
+        String lastName = txfLastName.getText();
+        
+        char [] space =lastName.toCharArray();
+        boolean twoSurnames = false;
+        for(char i : space){
+            if(i==' '){
+            twoSurnames = true;
+            }
+        }
+        
+        if(txfLastName.getText().isEmpty() || txfLastName.getText().isEmpty() || twoSurnames == false){
+            JOptionPane.showMessageDialog(this, "All fields must be complete");
+        }else{
+
+        BirthDate b1 = new BirthDate();
+        b1.setDay(Integer.parseInt(jcbDay.getSelectedItem().toString()));
+        b1.setMonth(Month.values()[jcbMonth.getSelectedIndex()]);
+        b1.setYear(Integer.parseInt(jcbYear.getSelectedItem().toString()));
+
+
+        Person p1 = new Person();
+        p1.setBirthdate(b1);
+        p1.setFirstName(txfName.getText());
+        p1.setGender(jcbGender.getSelectedItem().toString().equalsIgnoreCase("Male"));
+        p1.setLastName(txfLastName.getText());
+        p1.setState(jcbState.getSelectedIndex());
+                lblCurp.setText(p1.curp());
+        }
+        
+    }//GEN-LAST:event_btnGenerateCurpMouseClicked
 
     /**
      * @param args the command line arguments

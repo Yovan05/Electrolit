@@ -327,7 +327,7 @@
                   <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="32">
+                  <StringArray count="33">
                     <StringItem index="0" value="Aguascalientes "/>
                     <StringItem index="1" value="Baja California "/>
                     <StringItem index="2" value="Baja California Sur "/>
@@ -360,6 +360,7 @@
                     <StringItem index="29" value="Veracruz "/>
                     <StringItem index="30" value="Yucat&#xe1;n "/>
                     <StringItem index="31" value="Zacatecas"/>
+                    <StringItem index="32" value="Born abroad"/>
                   </StringArray>
                 </Property>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -622,6 +623,7 @@
                 </Property>
               </Properties>
               <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnGenerateCurpMouseClicked"/>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGenerateCurpActionPerformed"/>
               </Events>
             </Component>
