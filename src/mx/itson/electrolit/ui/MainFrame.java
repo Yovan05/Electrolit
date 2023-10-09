@@ -319,7 +319,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         }
         
-        if(txfLastName.getText().isEmpty() || txfLastName.getText().isEmpty() || twoSurnames == false){
+        if(txfName.getText().isEmpty() || txfLastName.getText().isEmpty() || twoSurnames == false){
             JOptionPane.showMessageDialog(this, "All fields must be complete");
         }else{
 
