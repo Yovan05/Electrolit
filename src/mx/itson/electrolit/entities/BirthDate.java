@@ -71,12 +71,12 @@ public class BirthDate {
            day =this.day+"";
        }
        
-       String mounth="";
+       String month="";
        
        if(1+this.month.ordinal()<10){
-        mounth = "0"+(1+this.month.ordinal())+"";
+        month = "0"+(1+this.month.ordinal())+"";
        }else{
-           mounth = 1+this.month.ordinal()+"";
+           month = 1+this.month.ordinal()+"";
        }
        
        String year = this.year+"";
@@ -88,7 +88,7 @@ public class BirthDate {
                lastDigits += digitYear;
            }
        }
-       String birthDay = lastDigits+mounth+day;
+       String birthDay = lastDigits+month+day;
        return birthDay;
    }
 
