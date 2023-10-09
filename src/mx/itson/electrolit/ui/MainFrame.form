@@ -332,17 +332,17 @@
                     <StringItem index="1" value="Baja California "/>
                     <StringItem index="2" value="Baja California Sur "/>
                     <StringItem index="3" value="Campeche "/>
-                    <StringItem index="4" value="Chiapas "/>
-                    <StringItem index="5" value="Chihuahua "/>
-                    <StringItem index="6" value="Ciudad de M&#xe9;xico "/>
-                    <StringItem index="7" value="Coahuila "/>
-                    <StringItem index="8" value="Colima "/>
-                    <StringItem index="9" value="Durango "/>
-                    <StringItem index="10" value="Estado de M&#xe9;xico "/>
-                    <StringItem index="11" value="Guanajuato "/>
-                    <StringItem index="12" value="Guerrero "/>
-                    <StringItem index="13" value="Hidalgo "/>
-                    <StringItem index="14" value="Jalisco "/>
+                    <StringItem index="4" value="Coahuila "/>
+                    <StringItem index="5" value="Colima"/>
+                    <StringItem index="6" value="Chiapas "/>
+                    <StringItem index="7" value="Chihuahua "/>
+                    <StringItem index="8" value="Ciudad de M&#xe9;xico  "/>
+                    <StringItem index="9" value="Durango"/>
+                    <StringItem index="10" value="Guanajuato   "/>
+                    <StringItem index="11" value="Guerrero "/>
+                    <StringItem index="12" value="Hidalgo "/>
+                    <StringItem index="13" value="Jalisco"/>
+                    <StringItem index="14" value="Estado de M&#xe9;xico "/>
                     <StringItem index="15" value="Michoac&#xe1;n "/>
                     <StringItem index="16" value="Morelos "/>
                     <StringItem index="17" value="Nayarit "/>

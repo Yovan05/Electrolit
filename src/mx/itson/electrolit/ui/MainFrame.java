@@ -100,7 +100,7 @@ public class MainFrame extends javax.swing.JFrame {
 
         jcbState.setBackground(new java.awt.Color(255, 255, 255));
         jcbState.setForeground(new java.awt.Color(0, 0, 0));
-        jcbState.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Aguascalientes ", "Baja California ", "Baja California Sur ", "Campeche ", "Chiapas ", "Chihuahua ", "Ciudad de México ", "Coahuila ", "Colima ", "Durango ", "Estado de México ", "Guanajuato ", "Guerrero ", "Hidalgo ", "Jalisco ", "Michoacán ", "Morelos ", "Nayarit ", "Nuevo León ", "Oaxaca ", "Puebla ", "Querétaro ", "Quintana Roo ", "San Luis Potosí ", "Sinaloa ", "Sonora ", "Tabasco ", "Tamaulipas ", "Tlaxcala ", "Veracruz ", "Yucatán ", "Zacatecas", "Born abroad" }));
+        jcbState.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Aguascalientes ", "Baja California ", "Baja California Sur ", "Campeche ", "Coahuila ", "Colima", "Chiapas ", "Chihuahua ", "Ciudad de México  ", "Durango", "Guanajuato   ", "Guerrero ", "Hidalgo ", "Jalisco", "Estado de México ", "Michoacán ", "Morelos ", "Nayarit ", "Nuevo León ", "Oaxaca ", "Puebla ", "Querétaro ", "Quintana Roo ", "San Luis Potosí ", "Sinaloa ", "Sonora ", "Tabasco ", "Tamaulipas ", "Tlaxcala ", "Veracruz ", "Yucatán ", "Zacatecas", "Born abroad" }));
         jcbState.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         jcbDay.setBackground(new java.awt.Color(255, 255, 255));
